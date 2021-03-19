@@ -2,17 +2,20 @@ import axios from 'axios'
 import { JSDOM } from 'jsdom'
 
 async function main() {
-  const res = await axios.get('https://wizul.us/nintendo/url')
-  const url = res.data
-  await doFetch(url, 1)
-
-  axios({
-    method: 'DELETE',
-    url: 'https://wizul.us/nintendo/url',
-    data: {
-      url
-    }
-  })
+  while (true) {
+    const res = await axios.get('https://wizul.us/nintendo/url')
+    const url = res.data
+    await doFetch(url, 1)
+    console.log('Done with', Object.fromEntries(new URL(url).searchParams.entries()))
+    axios({
+      method: 'DELETE',
+      url: 'https://wizul.us/nintendo/url',
+      data: {
+        url
+      }
+    })
+    await sleep(5000)
+  }
 }
 
 const typo = { slash: '/', second: '.', percent: '%' }
