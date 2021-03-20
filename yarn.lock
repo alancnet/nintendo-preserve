@@ -86,6 +86,11 @@ browser-process-hrtime@^1.0.0:
   resolved "https://registry.yarnpkg.com/browser-process-hrtime/-/browser-process-hrtime-1.0.0.tgz#3c9b4b7d782c8121e56f10106d84c0d0ffc94626"
   integrity sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==
 
+callsite@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/callsite/-/callsite-1.0.0.tgz#280398e5d664bd74038b6f0905153e6e8af1bc20"
+  integrity sha1-KAOY5dZkvXQDi28JBRU+borxvCA=
+
 caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
@@ -223,6 +228,11 @@ fast-levenshtein@~2.0.6:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
+fifo@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/fifo/-/fifo-2.3.0.tgz#182de8dd0632aa47cf6816d9bc4323317d5259dc"
+  integrity sha1-GC3o3QYyqkfPaBbZvEMjMX1SWdw=
+
 follow-redirects@^1.10.0:
   version "1.13.3"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.3.tgz#e5598ad50174c1bc4e872301e82ac2cd97f90267"
@@ -241,6 +251,13 @@ form-data@~2.3.2:
     asynckit "^0.4.0"
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
+
+gefer@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gefer/-/gefer-1.0.1.tgz#fd5126dfa817758622328da7ae2c31bea99b488c"
+  integrity sha512-dNdhVypvlWmO5ilDy0H+gT7PWI+lQYxgDGAHUyavzGOT/JjL9N4AELHM4CyIo2bYpqC8hsLNfhpF3YU6EAoL6g==
+  dependencies:
+    fifo "^2.3.0"
 
 getpass@^0.1.1:
   version "0.1.7"
@@ -485,6 +502,14 @@ request@^2.88.2:
     tough-cookie "~2.5.0"
     tunnel-agent "^0.6.0"
     uuid "^3.3.2"
+
+ripc@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ripc/-/ripc-2.0.1.tgz#5720707c19b293255f5fd1b0017404d5e690b38c"
+  integrity sha512-Lx/IdbSw4CNtVcQ50rf7mevTrZFrfr79oMsZxdEZcUf8Fp4ysTxLj7OwwDV8Nj9OnfV1j2Bdor3XXNGZaz7Vww==
+  dependencies:
+    callsite "^1.0.0"
+    gefer "^1.0.1"
 
 safe-buffer@^5.0.1, safe-buffer@^5.1.2:
   version "5.2.1"
